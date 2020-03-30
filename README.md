@@ -1,0 +1,1 @@
+# SNPsGAN_pytorch
