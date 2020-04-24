@@ -1,0 +1,12 @@
+# Run experiments
+echo "Running experiments (may take a few hours for each fold)"
+echo " Training model on fold 0"
+python $2/experiments/variant2/learn_model.py --which_fold=0 -eni=0.02 -dni=0.02 -ne=20000 --n_hidden_t_enc=[100,100] --n_hidden_t_dec=[100,100] --n_hidden_s=[100] --n_hidden_u=[100] --gamma=0 --learning_rate=0.00003 -lra=.999 --patience=1000 --optimizer=adam -bn=1 --embedding_source=./histo_GenotypicFrequency_perclass_fold0.npy -exp_name=$1_ -rp=0 --embedding_noise=0.0 --dataset_path=./ --save_perm=./final_models/ --save_tmp=./tmp_files/ >$1_fold0.txt  2>&1
+echo " Training model on fold 1"
+python $2/experiments/variant2/learn_model.py --which_fold=1 -eni=0.02 -dni=0.02 -ne=20000 --n_hidden_t_enc=[100,100] --n_hidden_t_dec=[100,100] --n_hidden_s=[100] --n_hidden_u=[100] --gamma=0 --learning_rate=0.00003 -lra=.999 --patience=1000 --optimizer=adam -bn=1 --embedding_source=./histo_GenotypicFrequency_perclass_fold1.npy -exp_name=$1_ -rp=0 --embedding_noise=0.0 --dataset_path=./ --save_perm=./final_models/ --save_tmp=./tmp_files/ >$1_fold1.txt  2>&1
+echo " Training model on fold 2"
+python $2/experiments/variant2/learn_model.py --which_fold=2 -eni=0.02 -dni=0.02 -ne=20000 --n_hidden_t_enc=[100,100] --n_hidden_t_dec=[100,100] --n_hidden_s=[100] --n_hidden_u=[100] --gamma=0 --learning_rate=0.00003 -lra=.999 --patience=1000 --optimizer=adam -bn=1 --embedding_source=./histo_GenotypicFrequency_perclass_fold2.npy -exp_name=$1_ -rp=0 --embedding_noise=0.0 --dataset_path=./ --save_perm=./final_models/ --save_tmp=./tmp_files/ >$1_fold2.txt  2>&1
+echo " Training model on fold 3"
+python $2/experiments/variant2/learn_model.py --which_fold=3 -eni=0.02 -dni=0.02 -ne=20000 --n_hidden_t_enc=[100,100] --n_hidden_t_dec=[100,100] --n_hidden_s=[100] --n_hidden_u=[100] --gamma=0 --learning_rate=0.00003 -lra=.999 --patience=1000 --optimizer=adam -bn=1 --embedding_source=./histo_GenotypicFrequency_perclass_fold3.npy -exp_name=$1_ -rp=0 --embedding_noise=0.0 --dataset_path=./ --save_perm=./final_models/ --save_tmp=./tmp_files/ >$1_fold3.txt  2>&1
+echo " Training model on fold 4"
+python $2/experiments/variant2/learn_model.py --which_fold=4 -eni=0.02 -dni=0.02 -ne=20000 --n_hidden_t_enc=[100,100] --n_hidden_t_dec=[100,100] --n_hidden_s=[100] --n_hidden_u=[100] --gamma=0 --learning_rate=0.00003 -lra=.999 --patience=1000 --optimizer=adam -bn=1 --embedding_source=./histo_GenotypicFrequency_perclass_fold4.npy -exp_name=$1_ -rp=0 --embedding_noise=0.0 --dataset_path=./ --save_perm=./final_models/ --save_tmp=./tmp_files/ >$1_fold4.txt  2>&1
